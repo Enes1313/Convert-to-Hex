@@ -26,10 +26,10 @@
 	#define DOWN_ARROW_KEY 66
 	#define RIGHT_ARROW_KEY 67
 	#define LEFT_ARROW_KEY 68
+	int getch();
 #else
 	#error "TODO"
 #endif
 
-int hexns(void);
 void gotoxy(short x, short y);
-int getch();
+int hexns(void);

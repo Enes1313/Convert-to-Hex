@@ -236,6 +236,8 @@ static int init()
 		tcsetattr(STDIN_FILENO, TCSANOW, &oldattr );
 		return ch;
 	}
+#else
+	#error "TODO"
 #endif
 
 int hexns(void)
@@ -318,7 +320,7 @@ int hexns(void)
 				#endif
 				input = getch();
 			}
-			
+
 			if (input == UP_ARROW_KEY || input == DOWN_ARROW_KEY || input == RIGHT_ARROW_KEY || input == LEFT_ARROW_KEY)
 			{
 				navigateInTheFrame();
